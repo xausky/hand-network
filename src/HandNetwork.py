@@ -37,7 +37,3 @@ class Network():
          headers=Network.COMMON_HERADERS, timeout=3)
         if response.text.find('v_failedTimes') is -1:
             raise BaseException(response.text)
-
-if __name__ == '__main__':
-    network = Network('10976',b'a7523003')
-    network.login()
