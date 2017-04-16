@@ -1,0 +1,6 @@
+#!/bin/sh
+if [ -z $HAND_NETWORK_PREFIX ];
+then
+	export HAND_NETWORK_PREFIX=/usr/share/hand-network
+fi
+$HAND_NETWORK_PREFIX/Application.py

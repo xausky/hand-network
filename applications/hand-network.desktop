@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=Hnad Network Login
+Exec=/usr/bin/hand-network
+Icon=/usr/share/hand-network/icon.png
+Type=Application
+Categories=GTK;GNOME;Utility;
