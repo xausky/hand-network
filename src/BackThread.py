@@ -34,6 +34,7 @@ class BackThread(threading.Thread):
         while self.runing:
             try:
                 self.cyc = self.network.login() * 0.8
+                return
             except:
                 logging.exception('retry login fail')
     def run(self):
