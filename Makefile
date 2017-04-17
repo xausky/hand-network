@@ -1,5 +1,5 @@
 deb=deb/target
-version=1.0
+version=1.1
 deb:src
 	mkdir -p $(deb)/usr/bin
 	mkdir -p $(deb)/usr/share/hand-network
