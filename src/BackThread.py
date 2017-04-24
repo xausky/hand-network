@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 #-*- coding: utf-8 -*-
 
 import sys
@@ -22,8 +22,8 @@ class BackThread(threading.Thread):
         self.password = password
         self.network = HandNetwork.Network(self.username, self.password)
         self.cyc = 0
-        self.beat_count = 999999
-        self.fetch_count = 999999
+        self.beat_count = 10000000
+        self.fetch_count = 10000
     def __check(self):
         if self.fetch_count >= 10000:
             self.fetch_count = 0

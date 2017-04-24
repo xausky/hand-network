@@ -1,7 +1,7 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 #-*- coding: utf-8 -*-
 
-import urllib
+import urllib.parse
 import json
 import base64
 import requests
@@ -22,7 +22,7 @@ class Network():
         response = requests.post(Network.LOGIN_URL, data=self.data,
          headers=Network.COMMON_HERADERS, timeout=3)
         responseText = base64.b64decode(response.text + '==')
-        responseJson = urllib.unquote(responseText.decode('utf8'))
+        responseJson = urllib.parse.unquote(responseText.decode('utf8'))
         jsonDict = json.loads(responseJson)
         heartBeatCyc = jsonDict.get('heartBeatCyc')
         if heartBeatCyc == None:
