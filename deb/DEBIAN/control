@@ -1,7 +1,0 @@
-Package: hand-network
-version: 1.1
-Architecture: amd64
-Maintainer: xausky
-Depends: python-gi
-Description:
-  The application can auto login hand-china company network.

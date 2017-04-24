@@ -14,7 +14,7 @@ class Network():
     'Accept': 'text/html'
     }
     def __init__(self, username, password):
-        b64Password = base64.b64encode(password)
+        b64Password = base64.b64encode(bytes(password,'utf8'))
         self.data = {'userName': username, 'userPwd': b64Password}
 
     def login(self):

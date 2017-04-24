@@ -22,8 +22,8 @@ class BackThread(threading.Thread):
         self.password = password
         self.network = HandNetwork.Network(self.username, self.password)
         self.cyc = 0
-        self.beat_count = sys.maxint
-        self.fetch_count = sys.maxint
+        self.beat_count = 999999
+        self.fetch_count = 999999
     def __check(self):
         if self.fetch_count >= 10000:
             self.fetch_count = 0

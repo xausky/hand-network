@@ -1,17 +1,15 @@
-deb=deb/target
+DESTDIR=target
 version=1.1
-deb:src
-	mkdir -p $(deb)/usr/bin
-	mkdir -p $(deb)/usr/share/hand-network
-	mkdir -p $(deb)/usr/share/applications
-	cp bin/* $(deb)/usr/bin
-	cp src/* $(deb)/usr/share/hand-network
-	cp share/* $(deb)/usr/share/hand-network
-	cp applications/* $(deb)/usr/share/applications
-	cp -r deb/DEBIAN $(deb)
-	dpkg-deb -b $(deb) hand-network_$(version)_amd64.deb
+.PHONY: install clean
 
+install:
+	mkdir -p $(DESTDIR)/usr/bin
+	mkdir -p $(DESTDIR)/usr/share/hand-network
+	mkdir -p $(DESTDIR)/usr/share/applications
+	cp bin/* $(DESTDIR)/usr/bin
+	cp src/* $(DESTDIR)/usr/share/hand-network
+	cp share/* $(DESTDIR)/usr/share/hand-network
+	cp applications/* $(DESTDIR)/usr/share/applications
 clean:
-	- rm -rf $(prefix)
-	- rm hand-network_$(version)_amd64.deb
 	- rm src/*.pyc
+	- rm -rf src/__pycache__
