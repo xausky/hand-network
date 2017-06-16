@@ -13,3 +13,4 @@ install:
 clean:
 	- rm src/*.pyc
 	- rm -rf src/__pycache__
+	- rm -rf target
