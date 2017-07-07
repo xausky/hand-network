@@ -32,6 +32,7 @@ class BackThread(threading.Thread):
                 raise BaseException(response.text)
     def __join_login(self):
         while self.runing:
+            time.sleep(1)
             try:
                 self.cyc = self.network.login() * 0.8
                 return
